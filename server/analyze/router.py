@@ -45,5 +45,5 @@ async def webscrape(asin: str) -> ProductDescription:
     )
 
 async def provide_analysis(product_description: ProductDescription) -> str:
-    geminiAnalysis.product_description_to_prompt(product_description)
+    return geminiAnalysis.product_description_to_prompt(product_description)
 
