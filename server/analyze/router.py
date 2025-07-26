@@ -6,13 +6,12 @@ import requests
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("/", status_code=200)
 async def analyze(amazon_product_url: str):
     url_verified, asin = verify_url(amazon_product_url)
     if url_verified:
         return {
-            "valid": True,
-            "webscrape": await webscrape(asin),
+            "analysis": await provide_analysis(await webscrape(asin))
         }
 
 
