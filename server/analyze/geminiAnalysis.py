@@ -27,7 +27,7 @@ def product_description_to_prompt(product_description):
     5. If available, recommend **certifications or labels** the user should look for in similar products.
     6. If applicable, suggest **recycling or disposal methods** for the product.
     
-    Be concise but informative. Present your answer in a readable format.
+    Be concise but informative. Present your answer in a markdown format.
     """
 
 def getResponse(product_description: ProductDescription) -> str:
