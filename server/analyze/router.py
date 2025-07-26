@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from analyze.models import ProductDescription
+import geminiAnalysis
 import requests
 
 router = APIRouter()
@@ -44,5 +45,5 @@ async def webscrape(asin: str) -> ProductDescription:
     )
 
 async def provide_analysis(product_description: ProductDescription) -> str:
-    pass
+    geminiAnalysis.product_description_to_prompt(product_description)
 
