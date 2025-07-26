@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import generativeai as genai
 from analyze.models import ProductDescription
 
 load_dotenv()

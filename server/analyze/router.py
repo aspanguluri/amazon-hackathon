@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from analyze.models import ProductDescription
-from geminiAnalysis.py import g
+from analyze import geminiAnalysis
 import requests
 
 router = APIRouter()
